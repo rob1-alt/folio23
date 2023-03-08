@@ -7,6 +7,7 @@ import showItemsMenu from '@/components/animation'
 import ProjectMenu from '@/components/projectsMenu'
 import NewsMenu from '@/components/newsMenu'
 import Meteo from '@/components/weather'
+import CompteurDeVues from '@/components/counter';
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -22,6 +23,8 @@ export default function Home() {
       setCloseMenu(!closeMenu)
       showItemsMenu();
     }
+
+
     return (
     <>
       <Head>
@@ -103,16 +106,16 @@ export default function Home() {
         <div className={styles.grid1}>
           <div className={styles.section}>
             <div className={styles.last}>LATEST POST</div>
-            <button className={styles.closeButton}> 
+            <button className={styles.closeButton} > 
             </button>
           </div>
           <div className={styles.pictureCard}></div>
           <div className={styles.titleCard}>
-            <span>Design Generate</span>
-            <span>45k views</span>
+            <span>Become a product manager at papernest</span>
+            <span><CompteurDeVues/></span>
           </div>
           <div className={styles.line}></div>
-          <p className={styles.description}>Testing popular designing tools and evaluating them with <span className={styles.bold}>MetroLab</span> crew and artists.</p>
+          <p className={styles.description}>While waiting for my first day at <span className={styles.bold}><a href="https://papernest.com" target='_blank' >Papernest</a></span> I wanted to start learning this trade.</p>
         </div>
         <div className={styles.grid2}>
           <Meteo/>
