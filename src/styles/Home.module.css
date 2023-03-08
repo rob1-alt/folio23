@@ -116,6 +116,7 @@
   box-sizing: content-box;
   text-transform: uppercase;
 }
+
 .grid{
   margin-top: 20px;
   display: grid;
@@ -151,6 +152,11 @@
 }
 .grid1{
   border: 1px solid grey;
+}
+.grid2{
+  color : black;
+  font-size: 4em;
+  font-weight: bold;
 }
 .pictureCard{
   width: 80%;
@@ -203,39 +209,21 @@
   align-items: center;
 }
 
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.1);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-
-
-
-
-
-
-
-.menuItem::before {
-  content: "";
+.close{
   position: absolute;
+  right: 0;
   top: 0;
-  left: -100%;
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
-  z-index: -1;
-  transition: left 0.3s ease;
+  padding: 60px;
 }
 
-.menuItem:hover::before {
-  left: 0;
+.closeButton{
+  background: transparent;
 }
+
+
+
+
+
+
+
+
