@@ -1,0 +1,46 @@
+.dropdownMenu{
+    background: #000;
+    border : 1px solid white;
+    border-radius: 10px;
+    position: absolute;
+    width: 15vw;
+    padding: 10px;
+}
+
+.projects{
+    display: flex;
+    align-items: center;
+    border: 1px aliceblue solid;
+    outline: 1px solid aliceblue;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    width: 15vw;
+}
+
+a .dropdownItem{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+.dropdownItem{
+    display: flex;
+    flex-direction: column;
+}
+
+.arrowMenu{
+    margin-top: 4px;
+  }
+  .arrowMenu1{
+    margin-top: 4px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .projects{
+        display: none;
+      }
+    .actualities{
+        display: none;
+      }
+  }
+    
