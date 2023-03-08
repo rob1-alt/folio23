@@ -10,16 +10,13 @@ import Meteo from '@/components/weather'
 import { motion } from "framer-motion";
 
 export default function Home() {
-  const [date, setDate] = useState(new Date());
+  const [date] = useState(new Date());
   const options = { day: 'numeric', month: 'long', year: 'numeric', weekday: 'long' };
   const dateString = date.toLocaleDateString('fr-FR', options);
   const [openMenu, setOpenMenu] = useState(false);
   const [closeMenu, setCloseMenu] = useState(false);
   const menu = ["Myflexoffice", "Corse matin", "Option 3"]
 
-
-  
-  
     function handleClick() {
       setOpenMenu(!openMenu);
       setCloseMenu(!closeMenu)
@@ -47,10 +44,10 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className={styles.menuFull}>
-        <motion.button 
-        className={styles.closeButton} onClick={handleClick} > 
+        <button 
+        className={styles.closeButton}> 
           <Image className={styles.close} src="cross.svg" alt="close" width={35} height={35} />
-        </motion.button>
+        </button>
           <ul>
             <motion.li
             initial={{ opacity: 0, y: -20 }}
@@ -79,8 +76,8 @@ export default function Home() {
         </div>
         
         <div className={styles.breadcrumb}>
-        <ProjectMenu className={styles.projects} options={menu} />
-        <NewsMenu className={styles.projects} options={menu} />
+          <ProjectMenu className={styles.projects} options={menu} />
+          <NewsMenu className={styles.projects} options={menu} />
         </div>
       </div>
       <div className={styles.body}>
@@ -104,6 +101,11 @@ export default function Home() {
       
       <div className={styles.grid}>
         <div className={styles.grid1}>
+          <div className={styles.section}>
+            <div className={styles.last}>LATEST POST</div>
+            <button className={styles.closeButton}> 
+            </button>
+          </div>
           <div className={styles.pictureCard}></div>
           <div className={styles.titleCard}>
             <span>Design Generate</span>

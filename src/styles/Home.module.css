@@ -6,6 +6,7 @@
 
 /*NAVIGATION STYLING*/
 .navigation{
+  z-index: 10;
   display: flex;
   flex-direction: row;
   font-size: 1.4xem;
@@ -27,8 +28,7 @@
   width: 25vw;
 }
 .arrow{
-  display: flex;
-  float: right;
+  margin-top: 4px;
 }
 .arrow:hover{
   animation: wiggle 0.5s ease-in-out;
@@ -159,6 +159,7 @@
   font-weight: bold;
 }
 .pictureCard{
+  margin-top: var(--margin-main);
   width: 80%;
   background: url('/pseudo.png');
   background-size: cover;
@@ -209,18 +210,30 @@
   align-items: center;
 }
 
-.close{
+button .close{
   position: absolute;
-  right: 0;
   top: 0;
-  padding: 60px;
+  right: 0;
+  background-color: red;
+  border: none;
+  color: aliceblue;
+  font-size: 2em;
+  cursor: pointer;
+}
+.section{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
 }
 
-.closeButton{
-  background: transparent;
+.last{
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 5px;
 }
-
-
 
 
 
