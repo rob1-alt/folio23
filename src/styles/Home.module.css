@@ -66,7 +66,7 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: url('/8cce397090bbb38ff736fccc4ee3369c.jpg');
+  background: url('/notion-avatar-1678287315184.svg');
   background-size: cover;
   background-position: center;
 }
@@ -219,3 +219,23 @@
 
 
 
+
+
+
+
+
+.menuItem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  z-index: -1;
+  transition: left 0.3s ease;
+}
+
+.menuItem:hover::before {
+  left: 0;
+}

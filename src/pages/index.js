@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useState } from 'react'
+import Link from "next/link";
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import showItemsMenu from '@/components/animation'
@@ -32,13 +33,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      
       <div className={styles.navigation}>
         <div className={styles.menu}>
           <span>Home Page</span>
           <button onClick={handleClick} >  
             <Image 
-            className={styles.arrow}  src="arrow_forward.svg" alt="arrow" width={15} height={15} />
+            className={styles.arrow}  src="hamburger.svg" alt="arrow" width={15} height={15} />
           </button>
           {openMenu && (
         <motion.div
@@ -47,23 +47,23 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         className={styles.menuFull}>
           <ul>
-            <motion.li 
+            <motion.li
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className={styles.menuItem}>About me
+            className={styles.menuItem}>Projects
             </motion.li>
             <motion.li 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className={styles.menuItem}>lorem ipsum
+            className={styles.menuItem}>About me 
             </motion.li>
             <motion.li 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
-            className={styles.menuItem}>lorem ipsum
+            className={styles.menuItem}>Contact
             </motion.li>
 
           </ul>
@@ -76,15 +76,6 @@ export default function Home() {
         <div className={styles.breadcrumb}>
         <ProjectMenu className={styles.projects} options={menu} />
         <NewsMenu className={styles.projects} options={menu} />
-          {/* <div className={styles.projects}>
-          <DropdownMenu options={menu} />
-              <span>Projects</span>
-              <Image src="/arrow_menu.svg" className={styles.arrowMenu} alt="arrow" width={25} height={25} />
-          </div> */}
-          {/* <div className={styles.actualities}>
-              <span>Newsroom</span>
-              <Image src="/arrow_menu.svg" className={styles.arrowMenu} alt="arrow" width={25} height={25} />
-          </div> */}
         </div>
       </div>
       <div className={styles.body}>
@@ -121,9 +112,6 @@ export default function Home() {
         </div>
         <div className={styles.grid3}></div>
       </div>
-      
-
-        
       </main>
     </>
     

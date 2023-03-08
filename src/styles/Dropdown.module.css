@@ -34,7 +34,6 @@ a .dropdownItem{
     margin-top: 4px;
   }
 
-
   @media screen and (max-width: 768px) {
     .projects{
         display: none;
