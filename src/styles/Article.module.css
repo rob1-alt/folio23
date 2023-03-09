@@ -1,0 +1,36 @@
+.article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pictureBanner{
+    width: 80%;
+    height: 120px;
+    background: url('/papernest-barcelona.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.details{
+    font-weight: bold;
+    margin-top: 50px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.line{
+    width: 80%;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 10px;
+}
+
+.articleContent{
+    width: 80%;
+    margin-top: 50px;
+    line-height: 30px;
+}
