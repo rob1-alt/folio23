@@ -47,10 +47,10 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className={styles.menuFull}>
-        <button 
+        {/* <button 
         className={styles.closeButton}> 
           <Image className={styles.close} src="cross.svg" alt="close" width={35} height={35} />
-        </button>
+        </button> */}
           <ul>
             <motion.li
             initial={{ opacity: 0, y: -20 }}
@@ -111,7 +111,7 @@ export default function Home() {
           </div>
           <div className={styles.pictureCard}></div>
           <div className={styles.titleCard}>
-            <span>Become a product manager at papernest</span>
+            <span>Become a product manager @ papernest</span>
             <span><CompteurDeVues/></span>
           </div>
           <div className={styles.line}></div>
