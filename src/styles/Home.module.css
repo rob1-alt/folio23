@@ -11,6 +11,7 @@
   flex-direction: row;
   font-size: 1.4xem;
   justify-content: space-between ;
+  font-size: 1.3em;
 }
 .breadcrumb{
   display: flex;
@@ -55,6 +56,7 @@
 }
 
 .rowMe{
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -136,6 +138,7 @@
   }
   .rowMe{
     font-size: 0.4em;
+    flex-direction: column-reverse;
   }
 }
   

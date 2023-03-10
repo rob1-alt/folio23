@@ -19,7 +19,7 @@ const Meteo = ({ ville }) => {
 
   return (
     <div>
-      <div> Paris</div>
+      <div>Paris</div>
       <div>{meteo.main && meteo.main.temp}°C</div>
       <div><img src={`https://openweathermap.org/img/wn/${meteo.weather && meteo.weather[0].icon}.png`} alt="Météo" /></div>
     </div>

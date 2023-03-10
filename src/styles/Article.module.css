@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 100px;
 }
 
 .pictureBanner{
@@ -11,6 +12,7 @@
     background: url('/papernest-barcelona.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 30px;
 }
 
 .details{
@@ -34,3 +36,26 @@
     margin-top: 50px;
     line-height: 30px;
 }
+
+@media screen and (max-width: 768px){
+    .articleContent{
+        justify-content: center;
+        font-size: 0.8em;
+        line-height: 22px;
+        width: 90%;
+    }
+    .pictureBanner{
+        width: 90%;
+    }
+    .details{
+        width: 90%;
+        font-size: 0.8em;
+    }
+    .views{
+        display: none;
+    }
+    .line{
+        width: 90%;
+    }
+}
+    

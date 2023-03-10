@@ -3,29 +3,15 @@ import { useEffect, useState } from 'react'
 import Link from "next/link";
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
-import showItemsMenu from '@/components/animation'
-import ProjectMenu from '@/components/projectsMenu'
-import NewsMenu from '@/components/newsMenu'
 import Meteo from '@/components/weather'
 import CompteurDeVues from '@/components/counter';
-import { motion } from "framer-motion";
-import ArticleCard from '@/components/articleCard';
+import Navigation from '@/components/navbar';
+
 
 export default function Home() {
   const [date] = useState(new Date());
   const options = { day: 'numeric', month: 'long', year: 'numeric', weekday: 'long' };
   const dateString = date.toLocaleDateString('fr-FR', options);
-  const [openMenu, setOpenMenu] = useState(false);
-  const [closeMenu, setCloseMenu] = useState(false);
-  const menu = ["Myflexoffice", "Corse matin", "Option 3"]
-
-
-    function handleClick() {
-      setOpenMenu(!openMenu);
-      setCloseMenu(!closeMenu)
-      showItemsMenu();
-    }
-
 
     return (
     <>
@@ -36,55 +22,7 @@ export default function Home() {
         <link rel="icon" href="/icon.ico" />
       </Head>
       <main className={styles.main}>
-      <div className={styles.navigation}>
-        <div className={styles.menu}>
-          <span>Home Page</span>
-          <button onClick={handleClick} >  
-            <Image 
-            className={styles.arrow}  src="hamburger.svg" alt="arrow" width={15} height={15} />
-          </button>
-          {openMenu && (        
-        <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className={styles.menuFull}>
-        {/* <button 
-        className={styles.closeButton}> 
-          <Image className={styles.close} src="cross.svg" alt="close" width={35} height={35} />
-        </button> */}
-          <ul>
-            <motion.li
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className={styles.menuItem}>Projects
-            </motion.li>
-            <motion.li 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            className={styles.menuItem}>About me 
-            </motion.li>
-            <motion.li 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-            className={styles.menuItem}>Contact
-            </motion.li>
-
-          </ul>
-          {/* Contenu du menu */}
-        </motion.div>
-      )}
-        
-        </div>
-        
-        <div className={styles.breadcrumb}>
-          <ProjectMenu className={styles.projects} options={menu} />
-          <NewsMenu className={styles.projects} options={menu} />
-        </div>
-      </div>
+      <Navigation/>
       <div className={styles.body}>
         <div className={styles.rowMe}>
           <h1><span>Robin Pautigny</span></h1>
