@@ -13,6 +13,8 @@ export default function Home() {
   const options = { day: 'numeric', month: 'long', year: 'numeric', weekday: 'long' };
   const dateString = date.toLocaleDateString('fr-FR', options);
 
+
+
     return (
     <>
       <Head>
@@ -46,9 +48,10 @@ export default function Home() {
             <div className={styles.grid1} >
             <div className={styles.section}>
               <div className={styles.last}>LATEST POST</div>
-              <button className={styles.closeButton} > 
-              </button>
-            </div>
+              <Link className={styles.seeMore} href="/Papernest">
+                 <div className={styles.arrow}></div>                 
+              </Link>
+              </div>
             <div className={styles.pictureCard}></div>
             <div className={styles.titleCard}>
               <span>Become a product manager @ Papernest</span>

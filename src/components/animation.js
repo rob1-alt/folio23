@@ -6,7 +6,7 @@ function showItemsMenu() {
       setTimeout(() => {
         item.classList.add('visible');
       }, delay);
-      delay += 100; // ajustez ce chiffre pour modifier la vitesse de l'animation
+      delay += 100; 
     });
   }
   

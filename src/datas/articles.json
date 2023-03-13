@@ -1,8 +1,11 @@
 [  
     {    
         "id": 1,    
+        "banner" : "/papernest-barcelona.jpg",    
          "title": "Become a product manager @ Papernest",    
-         "content": "ssss"  
+         "firstContent": "This year, once again, I had to find an internship as part of my academic curriculum at HETIC. As a fourth-year student, I thought it would be good to specialize a little and open myself up to my entrepreneurial ambitions. So, I tried everything to get a job with responsibilities, managing people and solving problems. That's why I applied to Papernest, where the Product Manager position seemed to meet all my expectations. I also met a mentor who immediately inspired me. I thank him for explaining all the specifics of his job and making me realize that I could really support him in his daily work.Previously, I was a project manager in a website creation agency. I had a good time, but I didn't really feel like it was the best fit for me. Indeed, I'm more interested in real entrepreneurial management than just managing a website project. Nevertheless, it was a formative experience, and I learned about agile methods, SCRUM, and all these frameworks. Today, I feel ready to take on the tasks at Papernest, which seems to be an engaging company that takes care of its employees and motivates them to grow the business.",
+         "twiceContent" : "azertyuiopqsdfghjklmwxcvbn",
+         "pictureFull" : "/tim-van-der-kuip-CPs2X8JYmS8-unsplash.jpg"
     },
     {    
         "id": 2,    

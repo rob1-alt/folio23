@@ -11,7 +11,7 @@
   flex-direction: row;
   font-size: 1.4xem;
   justify-content: space-between ;
-  font-size: 1.3em;
+  font-size: 1.3em  ;
 }
 .breadcrumb{
   display: flex;
@@ -28,12 +28,10 @@
   border-radius: 50px;
   width: 25vw;
 }
-.arrow{
+.burger{
   margin-top: 4px;
 }
-.arrow:hover{
-  animation: wiggle 0.5s ease-in-out;
-}
+
 .actualities{
   display: flex;
   align-items: center;
@@ -71,6 +69,10 @@
   background: url('/notion-avatar-1678287315184.svg');
   background-size: cover;
   background-position: center;
+}
+
+.profilePicture:hover{
+  animation: wiggle 0.5s ease-in-out;
 }
 
 .tag{
@@ -239,7 +241,92 @@ button .close{
 }
 
 
+.card{
+  text-decoration: none;
+}
 
 
 
+.seeMore{
+  background: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.arrow{
+  margin-right: 1px;
+  position:relative;
+  width: 30px;
+  height: 30px;
+  cursor:pointer;
+  transition:0.5s;
+  overflow:hidden;
+  transform: rotate(180deg);
+  margin-right: 2px;
+}
+
+
+.arrow:after{
+  position:absolute;
+  display:block;
+  content:"";
+  color: #000;
+  width: 20px;
+  height: 15px;
+/*   border:solid 1px;  */
+  top:-1px;
+  border-bottom:solid 2px;
+  transform:translatex(4px);
+
+  
+}
+
+.arrow:before{
+  position:absolute;
+  display:block;
+  content:"";
+  color:#000;
+  width: 8px;
+  height: 8px;
+  border-top:solid 2px;
+  border-left:solid 2px;
+  top:50%;
+  left:2px;
+  transform-origin:0% 0%;
+  transform:rotatez(-45deg);
+  
+
+}
+.arrow:hover:before{
+ animation: aniArrow01 1s cubic-bezier(0, 0.6, 1, 0.4) infinite 0.5s;
+}
+
+.arrow:hover:after{
+ animation: aniArrow02 1s cubic-bezier(0, 0.6, 1, 0.4) infinite 0.5s;
+}
+
+
+@keyframes aniArrow01 {
+  0% {
+    transform:rotatez(-45deg) translateY(30px) translateX(30px);
+  }
+  100% {
+    transform: rotatez(-45deg) translateY(-35px) translateX(-35px);
+  }
+}
+
+
+@keyframes aniArrow02 {
+  0% {
+    transform:translateX(45px);
+  }
+  100% {
+    transform:translateX(-44px);
+  }
+}
 
